@@ -1,4 +1,5 @@
 import * as S from "./styles";
+import upload from "../../assets/images/icon-upload.svg";
 
 export const Form = () => {
 	const dynamicDate = new Date().getFullYear() + 1;
@@ -8,6 +9,7 @@ export const Form = () => {
 			<S.FormTitle>
 				Your Journay to Coding Conf {`${dynamicDate}`} Starts Here!
 			</S.FormTitle>
+
 			<S.FormSubTitle>
 				Secure your spot at next year's biggest coding conference.
 			</S.FormSubTitle>
@@ -15,6 +17,15 @@ export const Form = () => {
 			<S.Form>
 				<S.InputLabel>Upload Avatar</S.InputLabel>
 				<S.UploadInputContainer>
+					<S.AvatarDropContent>
+						<img
+							src={upload}
+							alt="Upload"
+							width={"72px"}
+							height={"72px"}
+						/>
+						<p>Drag and drop or click to upload</p>
+					</S.AvatarDropContent>
 					<S.Input type={"file"} />
 				</S.UploadInputContainer>
 				<S.AvatarRules>
