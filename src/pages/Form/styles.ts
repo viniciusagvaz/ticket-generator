@@ -34,8 +34,7 @@ export const FormTitle = styled.h1`
 export const FormSubTitle = styled.h2`
 	font-size: 2rem;
 	font-weight: 400;
-	color: #fff;
-	opacity: 0.6;
+	color: ${({ theme }) => theme["--neutral-500"]};
 	text-align: center;
 `;
 
@@ -45,12 +44,12 @@ export const AvatarRules = styled.p`
 	justify-content: center;
 	align-items: center;
 	gap: 0.5rem;
-	text-align: center; 
+	text-align: center;
 `;
 
 export const InputLabel = styled.label`
 	font-size: 2rem;
-	opacity: 0.9;
+	color: ${({ theme }) => theme["--neutral-300"]};
 `;
 
 export const Input = styled.input`
@@ -103,7 +102,8 @@ export const AvatarDropContent = styled.span`
 		font-size: 1.6rem;
 		opacity: 0.7;
 	}
-`;
+
+	`;
 
 export const UploadInputContainer = styled.div`
 	background: rgba(255, 255, 255, 0.15);
@@ -113,12 +113,18 @@ export const UploadInputContainer = styled.div`
 
 	border-radius: 8px;
 	border: 1px dashed rgba(255, 255, 255, 0.5);
-
+	
 	padding: 2rem;
+
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background: rgba(255, 255, 255, 0.2);
+	}
 `;
 
 export const FormButton = styled.button`
-	background-color: orange;
+	background-color: ${(props) => props.theme["--orange-700"]};
 	border-radius: 8px;
 	border: none;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -126,4 +132,11 @@ export const FormButton = styled.button`
 	font-size: 2rem;
 	padding: 1rem;
 	margin: 1rem 0 0 0;
+
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+
+	&:hover {
+		background-color: ${(props) => props.theme["--orange-500"]};
+	}
 `;

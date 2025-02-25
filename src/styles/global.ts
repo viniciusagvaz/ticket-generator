@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
           box-sizing: border-box;
           font-size: 62.5%;
           font-family: 'Inconsolata','Poppins', sans-serif;
-          color: #fff;
+          color: ${(props) => props.theme["white"]};
           
      }
      
